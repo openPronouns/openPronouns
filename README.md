@@ -14,3 +14,10 @@ For example, a Discord bot could use openPronouns to look up an user ID on the m
  -----|-------------|----------
  [Odin](https://github.com/openPronouns/Odin) | Backend server written in JS/TS | ❎
  
+## Structure
+There are three main components to openPronouns, the "backend", the "identity server", and the "frontend".
+
+### Identity Server
+The reason for an identity server is to allow 3rd party integrations to work with openPronouns. If we use the Discord example from above, we will notice an issue. A Discord bot generally doesn’t have access to the email address, the two options would be for the bot to generate its own database or for it to access an identity server. However, there’s also a further issue with email. Unless, for example, Google was to set a DNS record pointing to a "backend" server for gmail.com, there would be no way to look someone up via email. Due to this limitation, it kind of means that we need an identity server to mitigate it.  
+
+However, an end user would be able to set their identity server should they wish. This means that a Discord bot provider would be able to host their own "identity server" to host this information. This means that in theory the Discord bot would be able to create an identity server/backend hybrid to host information as a backup for those who don’t use the service (i.e. a user would be able to submit their pronoun to the bot without needing an account with any openPronoun compatible service).
