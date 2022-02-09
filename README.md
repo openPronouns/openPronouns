@@ -1,6 +1,7 @@
 # openPronouns
 
 [![Join the chat at https://gitter.im/openPronouns/community](https://badges.gitter.im/openPronouns/community.svg)](https://gitter.im/openPronouns/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FopenPronouns%2FopenPronouns.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FopenPronouns%2FopenPronouns?ref=badge_shield)
 
 openPronouns is a project to allow federated pronoun fetching.
 
@@ -21,3 +22,7 @@ There are three main components to openPronouns, the "backend", the "identity se
 The reason for an identity server is to allow 3rd party integrations to work with openPronouns. If we use the Discord example from above, we will notice an issue. A Discord bot generally doesn’t have access to the email address, the two options would be for the bot to generate its own database or for it to access an identity server. However, there’s also a further issue with email. Unless, for example, Google was to set a DNS record pointing to a "backend" server for gmail.com, there would be no way to look someone up via email. Due to this limitation, it kind of means that we need an identity server to mitigate it.  
 
 However, an end user would be able to set their identity server should they wish. This means that a Discord bot provider would be able to host their own "identity server" to host this information. This means that in theory the Discord bot would be able to create an identity server/backend hybrid to host information as a backup for those who don’t use the service (i.e. a user would be able to submit their pronoun to the bot without needing an account with any openPronoun compatible service).
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FopenPronouns%2FopenPronouns.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FopenPronouns%2FopenPronouns?ref=badge_large)
